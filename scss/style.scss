@@ -1,7 +1,8 @@
 @use 'colors' as *;
 
 *::after,
-*::before* {
+*::before,
+* {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -42,7 +43,7 @@ nav {
 	}
 	.logo {
 		margin-right: auto;
-		margin-left: 2%;
+		margin-left: 5%;
 		width: 20%;
 	}
 }
@@ -52,7 +53,6 @@ nav {
 // ====================
 
 header {
-
 	.img1 {
 		display: block;
 		margin-left: auto;
@@ -64,7 +64,6 @@ header {
 		padding: 2em 2em 2em 2em;
 		text-align: center;
 		font-family: 'Open Sans', sans-serif;
-		
 
 		&__title {
 			font-size: 2.5rem;
@@ -73,6 +72,7 @@ header {
 
 		&__text {
 			font-size: 1.5rem;
+			padding: 1em;
 		}
 		&__form {
 			display: inline;
@@ -105,54 +105,59 @@ header {
 // TEAM
 // ==================
 
-Section{
-	
-		.bg{
-			background-image: url('../images/bg-curve-mobile.svg');
-		background-size: cover;
-		background-position: center;
+Section {
+	.ilustration2 {
 		width: 100%;
-		// height: auto;
-		
-		overflow: hidden;
-		}
-	
-	
-
-	.ilustration2{
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 1.5em;
+		margin-right: 1.5em;
 	}
-	
+	.team {
+		&__box {
+			position: relative;
+			padding-top: 5em;
+			margin: 2em 2.5em 2em 2.5em;
+			font-family: 'Open Sans', sans-serif; 
+		}
+		&__title {
+			text-align: center;
+			font-size: 1.6em;
+			font-weight: bold;
+		}
+		&__text{
+			padding-top: 1.5em;
+			text-align: left;
+			font-size: 1.4rem;
+			color: $desaturated-blue;
+		}
+		&__text2{
+			padding: 1em 0 2em 0;
+			text-align: left;
+			font-size: 1.4em;
+			color: $desaturated-blue;
+
+		}
+		&__link{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			color: $moderate-cyan;
+			text-decoration: none;
+			border-bottom: 1px solid $moderate-cyan;
+			padding-bottom: .4em;
+			font-size: 1.3rem;
+		}
+		&__arrow{
+			vertical-align: middle;
+			width: 1.5em;
+		}
+		
+
+		
+	}
+	.opinion{
+		margin: 2.5em;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ==================
 // MEDIA
@@ -163,17 +168,11 @@ Section{
 		.link {
 			font-size: 1.4rem;
 		}
-		// .logo {
-		// 	// width: 10rem;
-		// }
 	}
 }
 
 @media (min-width: 576px) {
 }
-
-
-
 
 @media (min-width: 768px) {
 	nav {
@@ -195,10 +194,10 @@ Section{
 				padding: 1em 2em 1em 1em;
 				margin-bottom: 0;
 			}
-			&__text{
+			&__text {
 				font-size: 2rem;
 			}
-			&__title{
+			&__title {
 				font-size: 3rem;
 			}
 		}
@@ -236,7 +235,6 @@ Section{
 			&__text {
 				font-size: 2.4rem;
 			}
-			
 		}
 	}
 }
