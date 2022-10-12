@@ -106,58 +106,98 @@ header {
 // ==================
 
 Section {
+	height: 100%;
+	width: 100%;
+		
 	.ilustration2 {
 		width: 100%;
-		margin-left: 1.5em;
-		margin-right: 1.5em;
+		margin-left: 0;
+		margin-right: 0;
 	}
 	.team {
+		&__bg{
+			position: relative;
+			height: 100%;
+			display: inline-block;
+		}
 		&__box {
 			position: relative;
 			padding-top: 5em;
 			margin: 2em 2.5em 2em 2.5em;
-			font-family: 'Open Sans', sans-serif; 
+			font-family: 'Open Sans', sans-serif;
+			z-index: 1;
 		}
 		&__title {
 			text-align: center;
 			font-size: 1.6em;
 			font-weight: bold;
 		}
-		&__text{
+		&__text {
 			padding-top: 1.5em;
 			text-align: left;
 			font-size: 1.4rem;
 			color: $desaturated-blue;
 		}
-		&__text2{
+		&__text2 {
 			padding: 1em 0 2em 0;
 			text-align: left;
 			font-size: 1.4em;
 			color: $desaturated-blue;
-
 		}
-		&__link{
+		&__link {
 			position: absolute;
 			left: 50%;
 			transform: translateX(-50%);
 			color: $moderate-cyan;
 			text-decoration: none;
 			border-bottom: 1px solid $moderate-cyan;
-			padding-bottom: .4em;
+			padding-bottom: 0.4em;
 			font-size: 1.3rem;
 		}
-		&__arrow{
+		&__arrow {
 			vertical-align: middle;
 			width: 1.5em;
 		}
-		
-
-		
 	}
-	.opinion{
+
+	.team__bg::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 12em;
+	background: url('../images/bg-curve-mobile.svg');
+	background-position: top;
+	background-size:contain;
+	background-repeat: no-repeat;
+	z-index: -1;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.opinion {
 		margin: 2.5em;
+		background-color: #fff;
 	}
 }
+
+	
+
 
 // ==================
 // MEDIA

@@ -87,16 +87,26 @@ header .header__btn:hover {
   background-color: hsla(224deg, 93%, 58%, 0.85);
 }
 
+Section {
+  height: 100%;
+  width: 100%;
+}
 Section .ilustration2 {
   width: 100%;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+}
+Section .team__bg {
+  position: relative;
+  height: 100%;
+  display: inline-block;
 }
 Section .team__box {
   position: relative;
   padding-top: 5em;
   margin: 2em 2.5em 2em 2.5em;
   font-family: "Open Sans", sans-serif;
+  z-index: 1;
 }
 Section .team__title {
   text-align: center;
@@ -129,8 +139,23 @@ Section .team__arrow {
   vertical-align: middle;
   width: 1.5em;
 }
+Section .team__bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 12em;
+  background: url("../images/bg-curve-mobile.svg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 Section .opinion {
   margin: 2.5em;
+  background-color: #fff;
 }
 
 @media (min-width: 375px) {
