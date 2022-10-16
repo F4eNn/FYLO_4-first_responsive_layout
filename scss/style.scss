@@ -1,5 +1,5 @@
-@use 'colors' as *;
 
+@use 'colors' as *;
 *::after,
 *::before,
 * {
@@ -29,7 +29,7 @@ nav {
 		list-style-type: none;
 		display: inline-block;
 		display: flex;
-		justify-content: end;
+		justify-content: flex-end;
 		align-items: center;
 		margin-top: 5%;
 		padding: 1em 1em 0 0;
@@ -47,136 +47,175 @@ nav {
 		width: 20%;
 	}
 }
-
 // =====================
 // HEADER
 // ====================
 
-header {
-	.img1 {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10em;
-		width: 100%;
+.img1 {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10em;
+	width: 100%;
+}
+.header {
+	padding: 2em 2em 2em 2em;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: bold;
 	}
-	.header {
-		padding: 2em 2em 2em 2em;
-		text-align: center;
-		font-family: 'Open Sans', sans-serif;
 
-		&__title {
-			font-size: 2.5rem;
-			font-weight: bold;
-		}
+	&__text {
+		font-size: 1.5rem;
+		padding: 1em;
+	}
+	&__form {
+		display: inline;
+	}
+	&__input {
+		width: 95%;
+		font-size: 1.6rem;
+		padding: 0.5em 0 0.5em 0.5em;
+		margin-bottom: 1em;
+	}
 
-		&__text {
-			font-size: 1.5rem;
-			padding: 1em;
-		}
-		&__form {
-			display: inline;
-		}
-		&__input {
-			width: 95%;
-			font-size: 1.6rem;
-			padding: 0.5em 0 0.5em 0.5em;
-			margin-bottom: 1em;
-		}
+	&__btn {
+		width: 100%;
+		padding: 0.6em;
+		border: 1px solid transparent;
+		border-radius: 0.3em;
+		background-color: $bright-blue;
+		color: $light-grayish-blue;
+		box-shadow: 1px 1px 5px $bright-blue;
+		cursor: pointer;
+		transition: background-color 0.3s;
 
-		&__btn {
-			width: 100%;
-			padding: 0.6em;
-			border: 1px solid transparent;
-			border-radius: 0.3em;
-			background-color: $bright-blue;
-			color: $light-grayish-blue;
-			box-shadow: 1px 1px 5px $bright-blue;
-			cursor: pointer;
-			transition: background-color 0.3s;
-
-			&:hover {
-				background-color: $bright-blue-hover;
-			}
+		&:hover {
+			background-color: $bright-blue-hover;
 		}
 	}
 }
+
 // ==================
 // TEAM
 // ==================
 
-Section {
-	.bg-img {
-		position: relative; 
-		
-	}
+.ilustration2 {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
 
-	.ilustration2 {
+.team {
+	position: relative;
+	&__bg-curve {
 		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.team {
-		&__box {
-			position: relative;
-			padding-top: 5em;
-			margin: 2em 2.5em 2em 2.5em;
-			font-family: 'Open Sans', sans-serif;
-		}
-		&__title {
-			text-align: center;
-			font-size: 1.6em;
-			font-weight: bold;
-		}
-		&__text {
-			padding-top: 1.5em;
-			text-align: left;
-			font-size: 1.4rem;
-			color: $desaturated-blue;
-		}
-		&__text2 {
-			padding: 1em 0 2em 0;
-			text-align: left;
-			font-size: 1.4em;
-			color: $desaturated-blue;
-		}
-		&__link {
+		padding-top: 4em;
+		margin-top: 10em;
+
+		&::after {
+			content: '';
 			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			color: $moderate-cyan;
-			text-decoration: none;
-			border-bottom: 1px solid $moderate-cyan;
-			padding-bottom: 0.4em;
-			font-size: 1.3rem;
-		}
-		&__arrow {
-			vertical-align: middle;
-			width: 1.5em;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('../images/bg-curve-mobile.svg');
+			background-size: contain;
+			background-position: top;
+			background-repeat: no-repeat;
+			z-index: -1;
 		}
 	}
 
-	.bg-img::before {
-		content: "";
+	&__bg-color {
+		padding-top: 5em;
+		background-color: #f9f8fe;
+	}
+
+	&__box {
+		position: relative;
+		padding-top: 5em;
+		margin: 2em 2.5em 2em 2.5em;
+		font-family: 'Open Sans', sans-serif;
+	}
+	&__title {
+		text-align: center;
+		font-size: 1.6em;
+		font-weight: bold;
+	}
+	&__text {
+		padding-top: 1.5em;
+		text-align: left;
+		font-size: 1.4rem;
+		color: $desaturated-blue;
+	}
+	&__text2 {
+		padding: 1em 0 2em 0;
+		text-align: left;
+		font-size: 1.4em;
+		color: $desaturated-blue;
+	}
+	&__link {
 		position: absolute;
-		top: 0px;
-		right: 0px;
-		bottom: 0px;
-		left: 0px;
-		height: 100%;
-		width: 100%;
-		background-image: url('../images/bg-curve-mobile.svg');
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: top;
-		padding-top: 20rem;
-		z-index: -1;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $moderate-cyan;
+		text-decoration: none;
+		border-bottom: 1px solid $moderate-cyan;
+		padding-bottom: 0.4em;
+		font-size: 1.3rem;
+	}
+	&__arrow {
+		vertical-align: middle;
+		width: 1.5em;
+	}
+}
+
+.opinion {
+	display: inline-block;
+	background-color: #fff;
+	margin: 7em 1.5em 10em 1.5em;
+	padding: 2em .5em 2em 2em;
+	border-radius: 8px;
+	box-shadow: 2px 2px 10px 1px  rgba(0, 0, 0, 0.2);
+
+	&__avatar{
+		border-radius: 50%;
+		width: 3em;
+
+	}
+	&__text{
+		margin-top: .5em;
+		line-height: 1.6em;
+		font-size: 1.2rem;
+	}
+	&__autor{
+		font-weight: bold;
+		letter-spacing: 1px; 
+	}
+	&__block-elements{
+		vertical-align: super;
+		display: inline-block;
+		margin: 1.5em 1em 0 ;
+
 	}
 
-	.opinion {
-		margin: 2.5em;
-		background-color: #fff;
-	}
+	
+}
+
+
+
+
+
+
+.article{
+	background-color: red;
+	height: 100%;
+	width: 100%;
 }
 // You have to add that image as a pseudo element positioned off that section, not try and make it a background on the section itself
 
@@ -193,6 +232,11 @@ Section {
 }
 
 @media (min-width: 576px) {
+	.team{
+		&__bg-color{
+			padding-top: em;
+		}
+	}
 }
 
 @media (min-width: 768px) {
@@ -258,4 +302,5 @@ Section {
 			}
 		}
 	}
+	
 }
