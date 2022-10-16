@@ -87,26 +87,19 @@ header .header__btn:hover {
   background-color: hsla(224deg, 93%, 58%, 0.85);
 }
 
-Section {
-  height: 100%;
-  width: 100%;
+Section .bg-img {
+  position: relative;
 }
 Section .ilustration2 {
   width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
-Section .team__bg {
-  position: relative;
-  height: 100%;
-  display: inline-block;
-}
 Section .team__box {
   position: relative;
   padding-top: 5em;
   margin: 2em 2.5em 2em 2.5em;
   font-family: "Open Sans", sans-serif;
-  z-index: 1;
 }
 Section .team__title {
   text-align: center;
@@ -139,18 +132,20 @@ Section .team__arrow {
   vertical-align: middle;
   width: 1.5em;
 }
-Section .team__bg::before {
+Section .bg-img::before {
   content: "";
   position: absolute;
-  width: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   height: 100%;
-  top: 0;
-  left: 0;
-  padding: 12em;
-  background: url("../images/bg-curve-mobile.svg");
-  background-position: top;
+  width: 100%;
+  background-image: url("../images/bg-curve-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: top;
+  padding-top: 20rem;
   z-index: -1;
 }
 Section .opinion {

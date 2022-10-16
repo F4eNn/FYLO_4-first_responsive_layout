@@ -106,26 +106,22 @@ header {
 // ==================
 
 Section {
-	height: 100%;
-	width: 100%;
+	.bg-img {
+		position: relative; 
 		
+	}
+
 	.ilustration2 {
 		width: 100%;
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.team {
-		&__bg{
-			position: relative;
-			height: 100%;
-			display: inline-block;
-		}
 		&__box {
 			position: relative;
 			padding-top: 5em;
 			margin: 2em 2.5em 2em 2.5em;
 			font-family: 'Open Sans', sans-serif;
-			z-index: 1;
 		}
 		&__title {
 			text-align: center;
@@ -160,44 +156,29 @@ Section {
 		}
 	}
 
-	.team__bg::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	padding: 12em;
-	background: url('../images/bg-curve-mobile.svg');
-	background-position: top;
-	background-size:contain;
-	background-repeat: no-repeat;
-	z-index: -1;
+	.bg-img::before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		height: 100%;
+		width: 100%;
+		background-image: url('../images/bg-curve-mobile.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: top;
+		padding-top: 20rem;
+		z-index: -1;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	.opinion {
 		margin: 2.5em;
 		background-color: #fff;
 	}
 }
-
-	
-
+// You have to add that image as a pseudo element positioned off that section, not try and make it a background on the section itself
 
 // ==================
 // MEDIA
