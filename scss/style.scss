@@ -1,4 +1,3 @@
-
 @use 'colors' as *;
 *::after,
 *::before,
@@ -40,6 +39,11 @@ nav {
 		font-size: 1.2rem;
 		text-decoration: none;
 		color: $desaturated-blue;
+		cursor: pointer;
+
+		&:hover {
+			color: #c9bdff;
+		}
 	}
 	.logo {
 		margin-right: auto;
@@ -53,10 +57,10 @@ nav {
 
 .img1 {
 	display: block;
+	width: 90%;
+	margin-top: 15em;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 10em;
-	width: 100%;
 }
 .header {
 	padding: 2em 2em 2em 2em;
@@ -70,7 +74,7 @@ nav {
 
 	&__text {
 		font-size: 1.5rem;
-		padding: 1em;
+		padding: 1em 1em 1em 0;
 	}
 	&__form {
 		display: inline;
@@ -104,9 +108,10 @@ nav {
 // ==================
 
 .ilustration2 {
-	width: 100%;
-	margin-left: 0;
-	margin-right: 0;
+	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .team {
@@ -132,14 +137,15 @@ nav {
 	}
 
 	&__bg-color {
-		padding-top: 5em;
+		padding-top: 7em;
+		padding-bottom: 10em;
 		background-color: #f9f8fe;
 	}
 
 	&__box {
 		position: relative;
 		padding-top: 5em;
-		margin: 2em 2.5em 2em 2.5em;
+		margin: 2em 2.5em 0 2.5em;
 		font-family: 'Open Sans', sans-serif;
 	}
 	&__title {
@@ -154,20 +160,21 @@ nav {
 		color: $desaturated-blue;
 	}
 	&__text2 {
-		padding: 1em 0 2em 0;
+		padding: 1em 0 3em 0;
 		text-align: left;
 		font-size: 1.4em;
 		color: $desaturated-blue;
 	}
 	&__link {
-		position: absolute;
-		left: 50%;
+		display: inline-block;
+		margin-left: 50%;
 		transform: translateX(-50%);
+
 		color: $moderate-cyan;
 		text-decoration: none;
 		border-bottom: 1px solid $moderate-cyan;
 		padding-bottom: 0.4em;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 	}
 	&__arrow {
 		vertical-align: middle;
@@ -178,51 +185,90 @@ nav {
 .opinion {
 	display: inline-block;
 	background-color: #fff;
-	margin: 7em 1.5em 10em 1.5em;
-	padding: 2em .5em 2em 2em;
+	margin: 7em 1.5em 0em 1.5em;
+	padding: 2em 0.5em 2em 2em;
 	border-radius: 8px;
-	box-shadow: 2px 2px 10px 1px  rgba(0, 0, 0, 0.2);
+	box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
 
-	&__avatar{
+	&__avatar {
 		border-radius: 50%;
 		width: 3em;
-
+		margin-top: 2em;
+		vertical-align: -100%;
 	}
-	&__text{
-		margin-top: .5em;
+	&__text {
+		margin-top: 0.5em;
 		line-height: 1.6em;
 		font-size: 1.2rem;
 	}
-	&__autor{
+	&__autor {
 		font-weight: bold;
-		letter-spacing: 1px; 
+		letter-spacing: 1px;
 	}
-	&__block-elements{
-		vertical-align: super;
+	&__block-elements {
 		display: inline-block;
-		margin: 1.5em 1em 0 ;
-
+		margin: 1.5em 1em 0;
 	}
-
-	
 }
 
-
-
-
-
-
-.article{
+.article {
 	background-color: red;
 	height: 100%;
 	width: 100%;
 }
-// You have to add that image as a pseudo element positioned off that section, not try and make it a background on the section itself
+
+// ================
+// SIGN IN
+// ================
+
+.sign {
+	background-color: $desaturated-blue;
+	display: flex;
+	flex-direction: column;
+	margin-top: 0;
+	&__text-box {
+		font-family: 'Raleway', sans-serif;
+		text-align: center;
+		color: #fff;
+		padding: 6em 4em 2em 4em;
+	}
+	&__title {
+		margin-bottom: 1em;
+		font-size: 2rem;
+	}
+	&__text {
+		font-size: 1.5em;
+		line-height: 1.5em;
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		margin: 0 6em 6em 6em;
+	}
+	&__input {
+		padding: 0.8em 5em 0.9em 0.5em;
+		width: 100%;
+
+		&::placeholder {
+			font-size: 1.2rem;
+		}
+	}
+	&__button {
+		margin-top: 0.7em;
+		padding: 0.8em 0 0.8em 0;
+		background-color: $bright-blue;
+		border: 1px solid transparent;
+		color: #fff;
+
+		&:hover {
+			background-color: $bright-blue-hover;
+		}
+	}
+}
 
 // ==================
 // MEDIA
 // ==================
-
 @media (min-width: 375px) {
 	nav {
 		.link {
@@ -232,10 +278,16 @@ nav {
 }
 
 @media (min-width: 576px) {
-	.team{
-		&__bg-color{
-			padding-top: em;
+	.team {
+		&__bg-color {
+			margin-top: 4.5%;
 		}
+	}
+	.opinion {
+		display: block;
+		width: 400px;
+		height: 200px;
+		margin-left: 0;
 	}
 }
 
@@ -245,26 +297,74 @@ nav {
 			font-size: 2rem;
 		}
 	}
-	header {
-		.header {
-			&__form {
-				display: flex;
-			}
-			&__btn {
-				width: 55%;
-				margin-left: 1em;
-				padding: 1em;
-			}
-			&__input {
-				padding: 1em 2em 1em 1em;
-				margin-bottom: 0;
-			}
-			&__text {
-				font-size: 2rem;
-			}
-			&__title {
-				font-size: 3rem;
-			}
+	.header {
+		&__form {
+			display: flex;
+		}
+		&__btn {
+			width: 55%;
+			margin-left: 1em;
+			padding: 1em;
+		}
+		&__input {
+			padding: 1em 2em 1em 1em;
+			margin-bottom: 0;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__title {
+			font-size: 3rem;
+		}
+	}
+	.team {
+		&__title {
+			font-size: 2rem;
+		}
+		&__text {
+			font-size: 1.6rem;
+		}
+		&__text2 {
+			font-size: 1.6rem;
+		}
+		&__link {
+			font-size: 1.6rem;
+		}
+	}
+	.opinion {
+		&__text {
+			font-size: 1.4rem;
+		}
+		&__avatar {
+			width: 5rem;
+		}
+		&__autor {
+			font-size: 1.2rem;
+		}
+		&__profession {
+			font-size: 1.1rem;
+		}
+	}
+	.sign {
+		&__form {
+			flex-direction: row;	
+			justify-content: space-between;		
+			margin-top: 2em;
+		}
+		&__button {
+			display: inline-block;
+			margin-top: 0;
+			width: 35%;
+			border: 1px solid $bright-blue;
+		}
+		&__input {
+			width: 60%;
+		}
+		&__title{
+			font-size: 2.2rem;
+		}
+		&__text{
+			font-size: 1.6rem;
 		}
 	}
 }
@@ -275,8 +375,10 @@ nav {
 			font-size: 3rem;
 		}
 	}
+
 	header {
 		.wrapper {
+			margin-top: 20em;
 			display: flex;
 			flex-direction: row-reverse;
 		}
@@ -302,5 +404,81 @@ nav {
 			}
 		}
 	}
-	
+
+	.team {
+		.ilustration2 {
+			width: 90%;
+			margin-top: 7em;
+			margin-left: 4em;
+			margin-right: auto;
+		}
+		.wrapper {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		&__box {
+			margin-left: 7em;
+			padding-top: 3em;
+			width: 100%;
+			text-align-last: left;
+		}
+		&__bg-curve {
+			&::after {
+				background-image: url('../images/bg-curve-desktop.svg');
+			}
+		}
+		&__bg-color {
+			padding-top: 0;
+		}
+
+		&__title {
+			font-size: 4rem;
+			text-align: left;
+		}
+		&__text,
+		&__text2 {
+			width: 80%;
+		}
+		&__text2 {
+			padding-bottom: 1em;
+		}
+		&__link {
+			margin-left: 0;
+			transform: translateX(0);
+		}
+	}
+	.opinion {
+		margin-top: 4.5em;
+	}
+	.sign{
+		&__container{
+			display: flex;
+		}
+		&__text-box{
+			text-align:left;
+			width: 60%;
+		}
+		&__form{
+			margin-top: 7em;
+			// flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			width: 50%;
+			margin-right: -10em;
+			
+		}
+		&__input{
+			width: 70%;
+			padding: 1.2em 7em 1.1em 1em;
+			&::placeholder{
+				font-size: 1.3em;
+			}
+		}
+		&__button{
+			margin-top: 1em;
+			
+		}
+	}
 }

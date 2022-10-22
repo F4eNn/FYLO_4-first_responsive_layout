@@ -36,6 +36,10 @@ nav .link {
   font-size: 1.2rem;
   text-decoration: none;
   color: hsl(238deg, 22%, 44%);
+  cursor: pointer;
+}
+nav .link:hover {
+  color: #c9bdff;
 }
 nav .logo {
   margin-right: auto;
@@ -45,10 +49,10 @@ nav .logo {
 
 .img1 {
   display: block;
+  width: 90%;
+  margin-top: 15em;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10em;
-  width: 100%;
 }
 
 .header {
@@ -62,7 +66,7 @@ nav .logo {
 }
 .header__text {
   font-size: 1.5rem;
-  padding: 1em;
+  padding: 1em 1em 1em 0;
 }
 .header__form {
   display: inline;
@@ -89,9 +93,10 @@ nav .logo {
 }
 
 .ilustration2 {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team {
@@ -116,13 +121,14 @@ nav .logo {
   z-index: -1;
 }
 .team__bg-color {
-  padding-top: 5em;
+  padding-top: 7em;
+  padding-bottom: 10em;
   background-color: #f9f8fe;
 }
 .team__box {
   position: relative;
   padding-top: 5em;
-  margin: 2em 2.5em 2em 2.5em;
+  margin: 2em 2.5em 0 2.5em;
   font-family: "Open Sans", sans-serif;
 }
 .team__title {
@@ -137,20 +143,20 @@ nav .logo {
   color: hsl(238deg, 22%, 44%);
 }
 .team__text2 {
-  padding: 1em 0 2em 0;
+  padding: 1em 0 3em 0;
   text-align: left;
   font-size: 1.4em;
   color: hsl(238deg, 22%, 44%);
 }
 .team__link {
-  position: absolute;
-  left: 50%;
+  display: inline-block;
+  margin-left: 50%;
   transform: translateX(-50%);
   color: hsl(170deg, 45%, 43%);
   text-decoration: none;
   border-bottom: 1px solid hsl(170deg, 45%, 43%);
   padding-bottom: 0.4em;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .team__arrow {
   vertical-align: middle;
@@ -160,7 +166,7 @@ nav .logo {
 .opinion {
   display: inline-block;
   background-color: #fff;
-  margin: 7em 1.5em 10em 1.5em;
+  margin: 7em 1.5em 0em 1.5em;
   padding: 2em 0.5em 2em 2em;
   border-radius: 8px;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
@@ -168,6 +174,8 @@ nav .logo {
 .opinion__avatar {
   border-radius: 50%;
   width: 3em;
+  margin-top: 2em;
+  vertical-align: -100%;
 }
 .opinion__text {
   margin-top: 0.5em;
@@ -179,7 +187,6 @@ nav .logo {
   letter-spacing: 1px;
 }
 .opinion__block-elements {
-  vertical-align: super;
   display: inline-block;
   margin: 1.5em 1em 0;
 }
@@ -190,6 +197,55 @@ nav .logo {
   width: 100%;
 }
 
+.sign {
+  background-color: hsl(238deg, 22%, 44%);
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+}
+.sign__text-box {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: #fff;
+  padding: 6em 4em 2em 4em;
+}
+.sign__title {
+  margin-bottom: 1em;
+  font-size: 2rem;
+}
+.sign__text {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+.sign__form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 6em 6em 6em;
+}
+.sign__input {
+  padding: 0.8em 5em 0.9em 0.5em;
+  width: 100%;
+}
+.sign__input::-moz-placeholder {
+  font-size: 1.2rem;
+}
+.sign__input:-ms-input-placeholder {
+  font-size: 1.2rem;
+}
+.sign__input::placeholder {
+  font-size: 1.2rem;
+}
+.sign__button {
+  margin-top: 0.7em;
+  padding: 0.8em 0 0.8em 0;
+  background-color: hsl(224deg, 93%, 58%);
+  border: 1px solid transparent;
+  color: #fff;
+}
+.sign__button:hover {
+  background-color: hsla(224deg, 93%, 58%, 0.85);
+}
+
 @media (min-width: 375px) {
   nav .link {
     font-size: 1.4rem;
@@ -197,30 +253,80 @@ nav .logo {
 }
 @media (min-width: 576px) {
   .team__bg-color {
-    padding-top: em;
+    margin-top: 4.5%;
+  }
+  .opinion {
+    display: block;
+    width: 400px;
+    height: 200px;
+    margin-left: 0;
   }
 }
 @media (min-width: 768px) {
   nav .link {
     font-size: 2rem;
   }
-  header .header__form {
+  .header__form {
     display: flex;
   }
-  header .header__btn {
+  .header__btn {
     width: 55%;
     margin-left: 1em;
     padding: 1em;
   }
-  header .header__input {
+  .header__input {
     padding: 1em 2em 1em 1em;
     margin-bottom: 0;
   }
-  header .header__text {
+  .header__text {
     font-size: 2rem;
   }
-  header .header__title {
+  .header__title {
     font-size: 3rem;
+  }
+  .team__title {
+    font-size: 2rem;
+  }
+  .team__text {
+    font-size: 1.6rem;
+  }
+  .team__text2 {
+    font-size: 1.6rem;
+  }
+  .team__link {
+    font-size: 1.6rem;
+  }
+  .opinion__text {
+    font-size: 1.4rem;
+  }
+  .opinion__avatar {
+    width: 5rem;
+  }
+  .opinion__autor {
+    font-size: 1.2rem;
+  }
+  .opinion__profession {
+    font-size: 1.1rem;
+  }
+  .sign__form {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+  }
+  .sign__button {
+    display: inline-block;
+    margin-top: 0;
+    width: 35%;
+    border: 1px solid hsl(224deg, 93%, 58%);
+  }
+  .sign__input {
+    width: 60%;
+  }
+  .sign__title {
+    font-size: 2.2rem;
+  }
+  .sign__text {
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 1200px) {
@@ -228,6 +334,7 @@ nav .logo {
     font-size: 3rem;
   }
   header .wrapper {
+    margin-top: 20em;
     display: flex;
     flex-direction: row-reverse;
   }
@@ -248,5 +355,76 @@ nav .logo {
   }
   header .header__text {
     font-size: 2.4rem;
+  }
+  .team .ilustration2 {
+    width: 90%;
+    margin-top: 7em;
+    margin-left: 4em;
+    margin-right: auto;
+  }
+  .team .wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .team__box {
+    margin-left: 7em;
+    padding-top: 3em;
+    width: 100%;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+  .team__bg-curve::after {
+    background-image: url("../images/bg-curve-desktop.svg");
+  }
+  .team__bg-color {
+    padding-top: 0;
+  }
+  .team__title {
+    font-size: 4rem;
+    text-align: left;
+  }
+  .team__text, .team__text2 {
+    width: 80%;
+  }
+  .team__text2 {
+    padding-bottom: 1em;
+  }
+  .team__link {
+    margin-left: 0;
+    transform: translateX(0);
+  }
+  .opinion {
+    margin-top: 4.5em;
+  }
+  .sign__container {
+    display: flex;
+  }
+  .sign__text-box {
+    text-align: left;
+    width: 60%;
+  }
+  .sign__form {
+    margin-top: 7em;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 50%;
+    margin-right: -10em;
+  }
+  .sign__input {
+    width: 70%;
+    padding: 1.2em 7em 1.1em 1em;
+  }
+  .sign__input::-moz-placeholder {
+    font-size: 1.3em;
+  }
+  .sign__input:-ms-input-placeholder {
+    font-size: 1.3em;
+  }
+  .sign__input::placeholder {
+    font-size: 1.3em;
+  }
+  .sign__button {
+    margin-top: 1em;
   }
 }/*# sourceMappingURL=style.css.map */
