@@ -553,6 +553,9 @@ nav .logo {
     width: 100%;
     margin-left: 0;
   }
+  .contact__fylo {
+    margin-left: 0.5em;
+  }
   .contact__about-us {
     margin-left: 0 auto;
     margin-right: 0 auto;
