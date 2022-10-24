@@ -13,12 +13,20 @@ body {
 }
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 .wrapper {
 	max-width: 1440px;
 	margin: 0 auto;
 }
-
+.attribution {
+	color: #fff;
+	a {
+		text-decoration: none;
+		color: #09ef;
+	}
+}
+// BDBAFA
 // =========================
 // NAVIGATION
 // =========================
@@ -49,6 +57,7 @@ nav {
 		margin-right: auto;
 		margin-left: 5%;
 		width: 20%;
+		color: #bdbafa;
 	}
 }
 // =====================
@@ -87,7 +96,7 @@ nav {
 	}
 
 	&__btn {
-		width: 100%;
+		width: 95%;
 		padding: 0.6em;
 		border: 1px solid transparent;
 		border-radius: 0.3em;
@@ -248,6 +257,7 @@ nav {
 	&__input {
 		padding: 0.8em 5em 0.9em 0.5em;
 		width: 100%;
+		border: none;
 
 		&::placeholder {
 			font-size: 1.2rem;
@@ -259,10 +269,100 @@ nav {
 		background-color: $bright-blue;
 		border: 1px solid transparent;
 		color: #fff;
+		box-shadow: 0px 1px 5px rgba(58, 56, 56, 0.466);
+		transition: background-color .3s;
 
 		&:hover {
 			background-color: $bright-blue-hover;
+			cursor: pointer;
 		}
+	}
+}
+// ============
+// CONTACT
+// ============
+.bg-contact {
+	background-color: $very-dark-blue;
+}
+.contact {
+	color: $light-grayish-blue;
+	padding: 4em 0 0em 0;
+	display: flex;
+	flex-direction: column;
+	margin-left: 4em;
+
+	&__fylo {
+		font-family: 'Open Sans', sans-serif;
+		margin-left: 0;
+		font-size: 1.4rem;
+		.logo {
+			width: 35%;
+			margin-bottom: 2em;
+		}
+	}
+	&__phone {
+		padding-bottom: 1em;
+		.phone-img {
+			margin-right: 1em;
+			width: 1.4rem;
+		}
+	}
+	&__email {
+		padding-bottom: 3em;
+		.email-img {
+			margin-right: 1em;
+			width: 1.4rem;
+		}
+	}
+
+	&__social-media {
+		display: flex;
+	}
+	&__about-us {
+		list-style: none;
+		margin-bottom: 3em;
+		font-size: 1.4rem;
+
+		.list-one {
+			padding-bottom: 1em;
+		}
+		.list-two {
+			padding-bottom: 1em;
+		}
+		.list-one:hover,
+		.list-two:hover {
+			color: $bright-blue;
+			cursor: pointer;
+		}
+		.list-one,
+		.list-two{
+			transition: color .3s;
+		}
+	}
+	&__social-media-mobile {
+		display: flex;
+		justify-content: center;
+		margin: none;
+		.fa-brands {
+			color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			font-size: 1.6rem;
+			height: 2em;
+			width: 2em;
+			margin: 0 1em 6em 0;
+			transition: color .3s;
+			&:hover{
+				color:  $bright-blue;
+				cursor: pointer;
+			}
+		}
+	}
+	&__social-media-desktop {
+		display: none;
 	}
 }
 
@@ -295,6 +395,9 @@ nav {
 	nav {
 		.link {
 			font-size: 2rem;
+		}
+		.logo{
+			width: 15%;
 		}
 	}
 	.header {
@@ -347,8 +450,8 @@ nav {
 	}
 	.sign {
 		&__form {
-			flex-direction: row;	
-			justify-content: space-between;		
+			flex-direction: row;
+			justify-content: space-between;
 			margin-top: 2em;
 		}
 		&__button {
@@ -356,15 +459,32 @@ nav {
 			margin-top: 0;
 			width: 35%;
 			border: 1px solid $bright-blue;
+			cursor: pointer;
 		}
 		&__input {
 			width: 60%;
 		}
-		&__title{
+		&__title {
 			font-size: 2.2rem;
 		}
-		&__text{
+		&__text {
 			font-size: 1.6rem;
+		}
+	}
+	.contact {
+		&__about-us {
+			margin-left: 5em;
+			font-size: 2rem;
+		}
+		&__fylo {
+			font-size: 2.4rem;
+			margin-left: 4.3em;
+			.phone-img {
+				width: 2.5rem;
+			}
+			.email-img {
+				width: 2.5rem;
+			}
 		}
 	}
 }
@@ -451,34 +571,78 @@ nav {
 	.opinion {
 		margin-top: 4.5em;
 	}
-	.sign{
-		&__container{
+	.sign {
+		&__container {
 			display: flex;
 		}
-		&__text-box{
-			text-align:left;
-			width: 60%;
-		}
-		&__form{
-			margin-top: 7em;
-			// flex-direction: column;
-			align-items: center;
-			flex-wrap: wrap;
-			align-items: flex-start;
+		&__text-box {
+			text-align: left;
 			width: 50%;
-			margin-right: -10em;
-			
+			margin: 6em 0 6em 3em;
 		}
-		&__input{
-			width: 70%;
-			padding: 1.2em 7em 1.1em 1em;
-			&::placeholder{
+		&__title {
+			font-size: 3rem;
+		}
+		&__form {
+			margin-top: 12em;
+			width: 50%;
+			display: inline-block;
+		}
+		&__input {
+			width: 80%;
+			padding: 1.2em 10em 1.1em 1em;
+			margin-left: 10%;
+
+			&::placeholder {
 				font-size: 1.3em;
 			}
 		}
-		&__button{
+		&__button {
 			margin-top: 1em;
-			
+			display: block;
+			margin-left: 10%;
+		}
+	}
+	.contact {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		&__about-us {
+			margin-left: 0 auto;
+			margin-right: 0 auto;
+		}
+		&__social-media-desktop {
+			display: flex;
+			padding-top: 20em;
+			margin-right: 3em;
+			.fa-brands {
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: 1px solid #fff;
+				border-radius: 50%;
+				font-size: 1.8rem;
+				height: 2.5em;
+				width: 2.5em;
+				margin: 0 1em 6em 0;
+				transition: color .3s;
+				&:hover{
+					color:  $bright-blue;
+					cursor: pointer;
+				}
+			}
+		}
+		&__social-media-mobile {
+			display: none;
+		}
+		&__about-us {
+			padding-top: 10em;
+		}
+		.logo {
+			margin-top: 4em;
+			width: 70%;
 		}
 	}
 }

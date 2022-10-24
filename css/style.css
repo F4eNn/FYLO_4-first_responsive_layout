@@ -13,11 +13,20 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.attribution {
+  color: #fff;
+}
+.attribution a {
+  text-decoration: none;
+  color: #0099ee;
 }
 
 nav ul {
@@ -45,6 +54,7 @@ nav .logo {
   margin-right: auto;
   margin-left: 5%;
   width: 20%;
+  color: #bdbafa;
 }
 
 .img1 {
@@ -78,7 +88,7 @@ nav .logo {
   margin-bottom: 1em;
 }
 .header__btn {
-  width: 100%;
+  width: 95%;
   padding: 0.6em;
   border: 1px solid transparent;
   border-radius: 0.3em;
@@ -225,6 +235,7 @@ nav .logo {
 .sign__input {
   padding: 0.8em 5em 0.9em 0.5em;
   width: 100%;
+  border: none;
 }
 .sign__input::-moz-placeholder {
   font-size: 1.2rem;
@@ -241,9 +252,95 @@ nav .logo {
   background-color: hsl(224deg, 93%, 58%);
   border: 1px solid transparent;
   color: #fff;
+  box-shadow: 0px 1px 5px rgba(58, 56, 56, 0.466);
+  transition: background-color 0.3s;
 }
 .sign__button:hover {
   background-color: hsla(224deg, 93%, 58%, 0.85);
+  cursor: pointer;
+}
+
+.bg-contact {
+  background-color: hsl(243deg, 87%, 12%);
+}
+
+.contact {
+  color: hsl(240deg, 75%, 98%);
+  padding: 4em 0 0em 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4em;
+}
+.contact__fylo {
+  font-family: "Open Sans", sans-serif;
+  margin-left: 0;
+  font-size: 1.4rem;
+}
+.contact__fylo .logo {
+  width: 35%;
+  margin-bottom: 2em;
+}
+.contact__phone {
+  padding-bottom: 1em;
+}
+.contact__phone .phone-img {
+  margin-right: 1em;
+  width: 1.4rem;
+}
+.contact__email {
+  padding-bottom: 3em;
+}
+.contact__email .email-img {
+  margin-right: 1em;
+  width: 1.4rem;
+}
+.contact__social-media {
+  display: flex;
+}
+.contact__about-us {
+  list-style: none;
+  margin-bottom: 3em;
+  font-size: 1.4rem;
+}
+.contact__about-us .list-one {
+  padding-bottom: 1em;
+}
+.contact__about-us .list-two {
+  padding-bottom: 1em;
+}
+.contact__about-us .list-one:hover,
+.contact__about-us .list-two:hover {
+  color: hsl(224deg, 93%, 58%);
+  cursor: pointer;
+}
+.contact__about-us .list-one,
+.contact__about-us .list-two {
+  transition: color 0.3s;
+}
+.contact__social-media-mobile {
+  display: flex;
+  justify-content: center;
+  margin: none;
+}
+.contact__social-media-mobile .fa-brands {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  height: 2em;
+  width: 2em;
+  margin: 0 1em 6em 0;
+  transition: color 0.3s;
+}
+.contact__social-media-mobile .fa-brands:hover {
+  color: hsl(224deg, 93%, 58%);
+  cursor: pointer;
+}
+.contact__social-media-desktop {
+  display: none;
 }
 
 @media (min-width: 375px) {
@@ -265,6 +362,9 @@ nav .logo {
 @media (min-width: 768px) {
   nav .link {
     font-size: 2rem;
+  }
+  nav .logo {
+    width: 15%;
   }
   .header__form {
     display: flex;
@@ -318,6 +418,7 @@ nav .logo {
     margin-top: 0;
     width: 35%;
     border: 1px solid hsl(224deg, 93%, 58%);
+    cursor: pointer;
   }
   .sign__input {
     width: 60%;
@@ -327,6 +428,20 @@ nav .logo {
   }
   .sign__text {
     font-size: 1.6rem;
+  }
+  .contact__about-us {
+    margin-left: 5em;
+    font-size: 2rem;
+  }
+  .contact__fylo {
+    font-size: 2.4rem;
+    margin-left: 4.3em;
+  }
+  .contact__fylo .phone-img {
+    width: 2.5rem;
+  }
+  .contact__fylo .email-img {
+    width: 2.5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -401,19 +516,21 @@ nav .logo {
   }
   .sign__text-box {
     text-align: left;
-    width: 60%;
+    width: 50%;
+    margin: 6em 0 6em 3em;
+  }
+  .sign__title {
+    font-size: 3rem;
   }
   .sign__form {
-    margin-top: 7em;
-    align-items: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    margin-top: 12em;
     width: 50%;
-    margin-right: -10em;
+    display: inline-block;
   }
   .sign__input {
-    width: 70%;
-    padding: 1.2em 7em 1.1em 1em;
+    width: 80%;
+    padding: 1.2em 10em 1.1em 1em;
+    margin-left: 10%;
   }
   .sign__input::-moz-placeholder {
     font-size: 1.3em;
@@ -426,5 +543,49 @@ nav .logo {
   }
   .sign__button {
     margin-top: 1em;
+    display: block;
+    margin-left: 10%;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .contact__about-us {
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+  }
+  .contact__social-media-desktop {
+    display: flex;
+    padding-top: 20em;
+    margin-right: 3em;
+  }
+  .contact__social-media-desktop .fa-brands {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    height: 2.5em;
+    width: 2.5em;
+    margin: 0 1em 6em 0;
+    transition: color 0.3s;
+  }
+  .contact__social-media-desktop .fa-brands:hover {
+    color: hsl(224deg, 93%, 58%);
+    cursor: pointer;
+  }
+  .contact__social-media-mobile {
+    display: none;
+  }
+  .contact__about-us {
+    padding-top: 10em;
+  }
+  .contact .logo {
+    margin-top: 4em;
+    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
