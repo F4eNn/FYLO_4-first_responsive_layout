@@ -348,7 +348,7 @@ nav {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			border: 1px solid #fff;
+			border: 1px solid rgba(255, 255, 255, 0.486);
 			border-radius: 50%;
 			font-size: 1.6rem;
 			height: 2em;
@@ -608,26 +608,28 @@ nav {
 		flex-direction: row;
 		justify-content: space-between;
 		width: 100%;
+		margin-left: 0;
 		&__about-us {
 			margin-left: 0 auto;
 			margin-right: 0 auto;
 		}
 		&__social-media-desktop {
 			display: flex;
+
 			padding-top: 20em;
-			margin-right: 3em;
+			
 			.fa-brands {
 				color: #fff;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				border: 1px solid #fff;
+				border: 1px solid rgba(255, 255, 255, 0.486);
 				border-radius: 50%;
-				font-size: 1.8rem;
-				height: 2.5em;
-				width: 2.5em;
-				margin: 0 1em 6em 0;
+				font-size: 1.6rem;
+				height: 2.2em;
+				width: 2.2em;
 				transition: color .3s;
+				margin: auto .5em;
 				&:hover{
 					color:  $bright-blue;
 					cursor: pointer;
